@@ -8,7 +8,7 @@ calendar.setfirstweekday(calendar.SUNDAY)
 today = dt.datetime.today().strftime("%Y.%m.%d")
 
 import pickle
-
+from openpyxl import Workbook, load_workbook
 
 # Set paths
 import os
@@ -310,3 +310,79 @@ def customer_profile(_df, unique_id, value, featurelist):
         df = pd.concat(dfs, axis=1)
         df.reset_index(inplace=True)
     return df
+
+# def rename_csv(df_path, dict_path, sheet_name, data_set): 
+#     '''
+#     Rename data set variables to SFL standard names. 
+#     Also indicates the number of rows and columns in the dfset as well as
+#     the number of unique customer numbers in the df set.
+
+#     Parameters
+#     ----------
+#     df_path : str
+#         The path from which the df set should be read
+
+#     dict_path : str
+#         The path from which the dictionary should be read
+    
+#     sheet_name : str
+#         The name of the sheet/tab of the dictionary in the excel workbook
+
+#     data_set : str
+#         The name of the df set with the variables to be renamed
+
+#     Returns
+#     -------
+#     dataframe
+#         A dataframe with variables in SFL standard names
+
+#     '''
+   
+#     df = pd.read_csv(df_path, mangle_dupe_cols=True)
+#     _dict = pd.read_excel(dict_path, sheet_name=sheet_name)
+#     _dict = _dict.dropna(thresh=4)
+#     _dict = _dict.loc[_dict['Data Set'] == data_set, :]
+#     df.rename(columns=dict(zip(_dict['External'],_dict['SFL'])), inplace=True)
+    
+#     df_new = df.filter(items=_dict['SFL'].unique().tolist())
+    
+#     all_colname = df_new.columns.tolist()
+#     all_colname = ', '.join(str(v) for v in all_colname)
+    
+#     print("The variables in the df are: \n{}".format(all_colname))
+    
+#     print("\nThe df has {:,.0f} records and {:,.0f} variables".format(len(df_new), df_new.shape[1]))
+#     print("\nThe df contains {:,.0f} unique customer numbers".format(df_new['customer_no'].nunique()))
+
+#     return df_new
+
+# #Extract feature names in data
+# def extract_feature_names(df, data_dictionary_path, dataset):
+#     wb = load_workbook(data_dictionary_path)
+#     wb = pd.ExcelWriter(issues_file_path, engine = 'xlsxwriter')
+            
+#             for sheet_name in dfs.keys():
+#                 dfs[sheet_name].to_excel(wb, sheet_name=sheet_name)
+#             wb.save()
+#             wb.close()
+#     df = pd.DataFrame({'Data Set': dataset,
+#                        'Client Feature Name': list(df.columns),
+#                        'Standardized Feature Name':})
+#     return df
+
+# def data_preview(df, threshold=0.20):
+#     _df = pd.DataFrame(df.dtypes,columns=['data type'])
+#     _df = _df.reset_index()
+#     _df['feature'] = _df['index']
+#     _df = _df[['feature','data type']]
+#     _df['first value'] = df.loc[0].values
+#     _df['missing value count'] = df.isnull().sum().values
+#     _df['missing value proportion'] = df.isnull().sum().values/len(df)
+#     _df['description'] = np.nan
+#     _df['questions'] = np.nan
+#     _df['answers'] = np.nan
+#     print('The data has {} features and {} data records'.format(df.shape[1], df.shape[0]))
+#     print('\n{} features have more than {} percent of data points missing. These features include: \n'.format(len(list(_df.loc[_df['missing value proportion'] > threshold]['feature'])), int(threshold * 100)))
+#     features_with_missing_data = list(_df.loc[_df['missing value proportion'] > threshold]['feature'])
+#     print(*features_with_missing_data, sep=', ')
+#     return _df
