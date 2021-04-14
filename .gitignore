@@ -10,6 +10,9 @@ __pycache__/
 mytools/
 codes/experimentation
 deprecated/
-documents/
 data/
-visualizations/
+
+# Virtual environment
+*.yml
+env/
+
