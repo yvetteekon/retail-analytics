@@ -1,0 +1,17 @@
+name: retail-analytics-python
+channels:
+ - defaults
+ - conda-forge
+dependencies:
+ - python=3.8
+ - pandas
+ - numpy
+ - scipy
+ - scikit-learn
+ - requests
+ - jupyter
+ - pip
+ - pip:
+  - imblearn
+
+prefix: C:\Users\Yvette\Documents\01 Data Science Projects\00 Github\02 retail analytics\retail-analytics
