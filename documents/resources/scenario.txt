@@ -1,0 +1,92 @@
+==== SALES ANALYTICS ====
+#Data Cleaning Project
+#Data Storytelling Project
+
+== Business Context
+#Business: Online Wholesale Restaurant Supply Store which provides beverages, paper products, catering supplies etc to restaurants and 
+	caterers. It is a specialized merchandise ie grocery shop
+#Useful Resources
+https://forum.wordreference.com/threads/dealer-vendor-trader-monger-merchant.813275/
+https://ecommerce-platforms.com/glossary/merchant
+manufacturers -> wholesalers (customers) -> retailers (customers) -> consumer
+verdor (seller), merchant, reseller, integrator, distributor
+
+#Audience : Sales and Marketing Executives (non-tech decision-makers) interested in seeing the product that scaled and the product that didn't scale, 
+and understanding how this varies by branch. Also interested in knowing the branch that made the most and least profit (their expectations)
+This visual will answer for when executives are trying to know what branch(es) to double down efforts or what products to do 
+more advertising for, so sales would soar. They want recommendation on whether to hire more employees, categories moving faster or slower etc.
+
+#Assumptions : We assume that the customers first sales transactions day represents the customers registration date or date of onboarding
+
+== Data
+#Source
+Kaggle: https://www.kaggle.com/codemysteries/salesdb
+Modified data to make it more intuitive and real (data cleaning)
+
+#Additional Features to Derive
+
+== ASSUMPTION ABOUT Me:
+#Role
+I am an expert analyst who has been hired to discover with speed and accuracy, interesting and important opportunities worth exploring
+	further and business problems worth solving from the business data
+
+#Steps
+1. Read up on business and industry modus operandi
+2. Understand the data (data dictionary not provided)
+3. Clean the data
+4. Jot down interesting initial insights from the data (creating CONTENT)
+5. Determine focus metric and create story that resonates with this focus metric (sales and employee performance)
+6. Draw a dashboard of what I expect to create with a visualizing tool (upload snapshot to Github account) (deciding on the VISUALS)
+7. Create a dashboard with Tableau Public and create a Presentation Deck with the snapshots from the Tableau Dashboard. Some features may be
+	derived in Tableau. Prefix them with derived.
+	Goal is to craft a compelling data story or narrative that will inpire decision-makers to take an action ie invest in 
+	exploring the opportunities and business problems I recommend in my presentation. Craft your data story to be laser focused on 
+	showing and communicating your recommendations (focus metric) so drop all the not-so strong points from the visual display
+	(DELIVERY)
+
+#Presentation Deck
+1. Assumption about the business context, and stakeholders and stakeholder expectations and my task
+2. Snapshot of data and assumptions made
+3. Visual that captures occurence of event or focus of analysis over a period of time in the past. Make comparison on growth or performance 
+	across time period to answer stakeholder expectation
+4. Give some insights from the visual
+5. What is the big takeaway - stakeholder should act or not act and implication of acting and also of not acting
+6. Make statistical projection of growth in X number of years. Header should describe action that is recommended. Statistical projection, 
+	visualized on chart will make the story more compeling
+#SUMMARY of 3 to 6:
+a. What is the expectation of the client? That becomes the pivot or focus of discovering when exploring the data
+b. What does the past data say about this expectation / focus comparing it across branches, time etc. Historically what has been the trend.
+c. What are the statistical projections regarding this expectations. The header should state the recommendation and the visuals should 
+	support the recommendation
+2018.12.01_Yvette_Data Visualization and Storytelling (external hard drive)
+
+#Ideas
+A
+- Data Extraction Date
+- Timeframe
+- Users (Customers) = X+ (discount, loyal, need-based customers)
+- Distinct Items = 452
+- Distint Categories = 20
+- Revenue
+
+B
+- Inventory dashboard (modify date indicates date products were received from the manufacturer distributors)
+- Performance dashboard - Sales, Employees
+- Growth dashboard (customers, sales, revenue, employees, platform engagement etc)
+- Usage dashboard
+- https://blog.close.com/sales-analysis/
+- https://towardsdatascience.com/data-driven-growth-with-python-part-1-know-your-metrics-812781e66a5b
+
+C
+- Decide on metric for quantifying business problem
+- Give topline numbers
+- Slice topline numbers according to region, customer type, sales day of week, sales week of month, sales time of day
+
+#Future Work
+1. Convert data cleaning notebook to general script that can scale in cleaning similar data
+2. Clean pre_process.py
+3. Customer Analytics
+4. Time Series Analysis (Sales Forecasting)
+5. Market Basket Analysis
+
+
