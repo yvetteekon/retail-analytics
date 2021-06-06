@@ -11,6 +11,8 @@ DICTIONARY_DIR = os.path.join(project_parent_directory, 'dictionary')
 
 #raw data files
 raw_customer_data = os.path.join(RAW_DIR, 'Customer.csv')
+raw_city_data = os.path.join(RAW_DIR, 'cities.csv')
+raw_us_regions_data = os.path.join(RAW_DIR, 'us census bureau regions and divisions.csv')
 raw_transactions_data = os.path.join(RAW_DIR, 'Transactions.csv')
 raw_products_data = os.path.join(RAW_DIR, 'prod_cat_info.csv')
 
