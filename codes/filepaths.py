@@ -17,8 +17,11 @@ raw_transactions_data = os.path.join(RAW_DIR, 'Transactions.csv')
 raw_products_data = os.path.join(RAW_DIR, 'prod_cat_info.csv')
 
 #interim data files
-interim_transactions_data = os.path.join(INTERIM_DIR, 'transactions_data_clean.csv')
-interim_transactions_data_aggregated = os.path.join(INTERIM_DIR, 'transactions_data_aggregated.csv')
+clean_transactions_data_v1 = os.path.join(INTERIM_DIR, 'transactions_data_clean_v1.csv')
+clean_customer_data_v1 = os.path.join(INTERIM_DIR, 'customer_data_clean_v1.csv')
+clean_cities_data_v1 = os.path.join(INTERIM_DIR, 'cities_data_clean_v1.csv')
+clean_us_regions_data_v1 = os.path.join(INTERIM_DIR, 'us_regions_data_clean_v1.csv')
+derived_transactions_data_v1 = os.path.join(INTERIM_DIR, 'transactions_data_derived_v1.csv')
 
 #processed data files
 master_file_data = os.path.join(PROCESSED_DIR, 'master_file.csv')
